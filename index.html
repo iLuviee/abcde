@@ -196,22 +196,24 @@
             <!DOCTYPE html>
 
   <!-- Jam digital (24 jam) -->
-            <div style="display: inline-block; justify-content: center; align-items: center">
-              <span id="h"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="m"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="s"></span>
-            
-              <script>
-                function pad(n) { return n.toString().padStart(2, '0'); }
-            
-                function updateClock() {
-                  const now = new Date();
-                  document.getElementById('h').textContent = pad(now.getHours());   // 24 jam
-                  document.getElementById('m').textContent = pad(now.getMinutes());
-                  document.getElementById('s').textContent = pad(now.getSeconds());
-                }
-            
-                updateClock();                   // set isi awal
-                setInterval(updateClock, 1000);  // update tiap detik
-              </script>
+            <div style="text-align: center;">
+              <div style="display: inline-block; justify-content: center; align-items: center">
+                <span id="h"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="m"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="s"></span>
+              
+                <script>
+                  function pad(n) { return n.toString().padStart(2, '0'); }
+              
+                  function updateClock() {
+                    const now = new Date();
+                    document.getElementById('h').textContent = pad(now.getHours());   // 24 jam
+                    document.getElementById('m').textContent = pad(now.getMinutes());
+                    document.getElementById('s').textContent = pad(now.getSeconds());
+                  }
+              
+                  updateClock();                   // set isi awal
+                  setInterval(updateClock, 1000);  // update tiap detik
+                </script>
+              </div>
             </div>
           </div>
         </div>
